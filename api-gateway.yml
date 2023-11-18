@@ -1,8 +1,17 @@
 spring:
   application:
-    name: api-gateway
+    name: api-gateway  
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+            - GET
+            - POST
+            - PATCH
+            - DELETE
       routes:
         - id: COMMERCE-SERVICE
           uri: lb://COMMERCE-SERVICE/
