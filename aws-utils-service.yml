@@ -1,6 +1,9 @@
 spring:
   application:
     name: aws-utils
+  cloud:
+    zipkin:
+      base-url: ${ZIPKIN_URI}
 logging:
   level:
     root: debug

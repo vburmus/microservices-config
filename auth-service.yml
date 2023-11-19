@@ -5,6 +5,9 @@ spring:
     url: ${SQL_URI}
     username: ${SQL_USERNAME}
     password: ${SQL_PASSWORD}
+  cloud:
+    zipkin:
+      base-url: ${ZIPKIN_URI}
 server:
   port: 0
 eureka:

@@ -18,6 +18,8 @@ spring:
         format_sql: 'true'
         show_sql: 'true'
   cloud:
+    zipkin:
+      base-url: ${ZIPKIN_URI}
     openfeign:
       client:
         config:
