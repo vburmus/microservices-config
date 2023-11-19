@@ -8,6 +8,10 @@ spring:
   cloud:
     zipkin:
       base-url: ${ZIPKIN_URI}
+  rabbitmq:
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
+    addresses: ${RABBIT_URI}
 server:
   port: 0
 eureka:
@@ -16,8 +20,4 @@ eureka:
       defaultZone: ${EUREKA_URI}
 logging:
   level:
-    root: info
-management:
-  tracing:
-    sampling:
-      probability: 1.0
+   root: info

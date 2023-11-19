@@ -6,7 +6,7 @@ spring:
       base-url: ${ZIPKIN_URI}
 logging:
   level:
-    root: debug
+    root: info
 server:
   port: 0
 aws:

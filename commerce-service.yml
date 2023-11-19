@@ -27,6 +27,10 @@ spring:
             connectTimeout: 5000
             readTimeout: 5000
             loggerLevel: basic
+  rabbitmq:
+    username: ${RABBIT_USER}
+    password: ${RABBIT_PASSWORD}
+    addresses: ${RABBIT_URI}
 logging:
   level:
     root: info
@@ -36,7 +40,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI}
-management:
-  tracing:
-    sampling:
-      probability: 1.0
