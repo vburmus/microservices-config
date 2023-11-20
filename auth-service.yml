@@ -5,8 +5,7 @@ spring:
     url: ${SQL_URI}
     username: ${SQL_USERNAME}
     password: ${SQL_PASSWORD}
-  cloud:
-    zipkin:
+  zipkin:
       base-url: ${ZIPKIN_URI}
   rabbitmq:
     username: ${RABBIT_USER}

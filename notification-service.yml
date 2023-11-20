@@ -19,9 +19,9 @@ spring:
           auth: true
           starttls:
             enable: true
-  cloud:
-    zipkin:
-      base-url: ${ZIPKIN_URI}
+ 
+  zipkin:
+    base-url: ${ZIPKIN_URI}
 server:
   port: 0
 logging:

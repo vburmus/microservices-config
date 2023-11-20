@@ -17,9 +17,9 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: 'true'
         show_sql: 'true'
-  cloud:
-    zipkin:
+  zipkin:
       base-url: ${ZIPKIN_URI}
+  cloud:
     openfeign:
       client:
         config:

@@ -1,9 +1,9 @@
 spring:
   application:
     name: api-gateway  
+  zipkin:
+      base-url: ${ZIPKIN_URI} 
   cloud:
-    zipkin:
-      base-url: ${ZIPKIN_URI}
     gateway:
       globalcors:
         corsConfigurations:
