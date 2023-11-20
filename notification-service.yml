@@ -19,11 +19,15 @@ spring:
           auth: true
           starttls:
             enable: true
- 
-  zipkin:
-    base-url: ${ZIPKIN_URI}
 server:
   port: 0
 logging:
   level:
     root: info
+management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_URI}/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
