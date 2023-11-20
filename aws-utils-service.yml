@@ -1,8 +1,6 @@
 spring:
   application:
     name: aws-utils
-  zipkin:
-      base-url: ${ZIPKIN_URI}
 logging:
   level:
     root: info
@@ -19,6 +17,9 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI}
 management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_URI}/api/v2/spans
   tracing:
-    sampling:
-      probability: 1.0
+      sampling:
+        probability: 1.0

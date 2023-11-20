@@ -5,8 +5,6 @@ spring:
     url: ${SQL_URI}
     username: ${SQL_USERNAME}
     password: ${SQL_PASSWORD}
-  zipkin:
-      base-url: ${ZIPKIN_URI}
   rabbitmq:
     username: ${RABBIT_USER}
     password: ${RABBIT_PASSWORD}
@@ -19,4 +17,11 @@ eureka:
       defaultZone: ${EUREKA_URI}
 logging:
   level:
-   root: info
+    root: info
+management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_URI}/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0

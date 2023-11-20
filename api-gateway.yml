@@ -1,8 +1,8 @@
 spring:
   application:
-    name: api-gateway  
+    name: api-gateway
   zipkin:
-      base-url: ${ZIPKIN_URI} 
+    base-url: ${ZIPKIN_URI}
   cloud:
     gateway:
       globalcors:
@@ -10,10 +10,10 @@ spring:
           '[/**]':
             allowedOrigins: "*"
             allowedMethods:
-            - GET
-            - POST
-            - PATCH
-            - DELETE
+              - GET
+              - POST
+              - PATCH
+              - DELETE
       routes:
         - id: COMMERCE-SERVICE
           uri: lb://COMMERCE-SERVICE/
@@ -43,6 +43,9 @@ logging:
   level:
     root: info
 management:
+  zipkin:
+    tracing:
+      endpoint: ${ZIPKIN_URI}/api/v2/spans
   tracing:
-    sampling:
-      probability: 1.0
+      sampling:
+        probability: 1.0
